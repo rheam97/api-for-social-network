@@ -1,0 +1,23 @@
+{
+  "name": "api-for-social-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rheam97/api-for-social-network.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rheam97/api-for-social-network/issues"
+  },
+  "homepage": "https://github.com/rheam97/api-for-social-network#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9"
+  }
+}
