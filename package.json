@@ -18,6 +18,7 @@
   "homepage": "https://github.com/rheam97/api-for-social-network#readme",
   "dependencies": {
     "express": "^4.17.3",
+    "moment": "^2.29.2",
     "mongoose": "^6.2.9"
   }
 }
