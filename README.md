@@ -20,6 +20,8 @@
   ## Usage
   Refer to installation. Create users, add friends, write down thoughts, and react to others' thoughts.
 
+  Here is a [video](https://drive.google.com/file/d/1pu7Jm3Y11i3NW-HqG8IwNRyP3nrEMfys/view) showing how the application can be used.
+
   <a name="license"></a>
   ## Licensing
   This app is licensed under MIT. For more information, click on the badge link above.
