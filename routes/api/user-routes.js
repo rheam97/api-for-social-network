@@ -2,7 +2,7 @@ const router = require('express').Router()
 const {getAllUsers, getUserById, updateUserById, createUser, 
     deleteUserById, 
     addFriend, 
-    deleteFriend} = require('../../controllers/user-controller')
+    deleteFriend} = require('../../controllers/user-controllers')
 
     router
     .route('/')
