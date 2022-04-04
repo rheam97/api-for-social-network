@@ -76,24 +76,20 @@ const thoughtController = {
   },
   //delete thought by id
   removeThought({ params }, res) {
-    Thought.findOneAndDelete({ _id: params.thoughtId })
+    Thought.findOneAndDelete({ _id: params.id })
       .then((deletedThought) => {
         if (!deletedThought) {
           return res.status(404).json({ message: "No thought with this id." });
         }
         return User.findOneAndUpdate(
           { _id: params.userId },
-          { $pull: { thoughts: params.thoughtId } },
+          { $pull: { thoughts: params.id } },
           { new: true }
-        );
-      })
-      .then((dbUserData) => {
-        if (!dbUserData) {
-          res.status(404).json({ message: "No user found with this id" });
-          return;
-        }
-        res.json(dbUserData);
-      })
+        )
+    .then(()=> {
+        res.json({message: 'Successfully deleted the thought.'})
+    })
+})
       .catch((err) => res.json(err));
   },
   //create reaction in single thought reaction array
@@ -113,10 +109,10 @@ const thoughtController = {
       .catch((err) => res.json(err));
   },
   //delete reaction and pull from array by id value
-  removeReaction({ params }, res) {
+  removeReaction({ params, body }, res) {
     Thought.findOneAndUpdate(
       { _id: params.thoughtId },
-      { $pull: { reactions: { reactionId: params.reactionId } } },
+      { $pull: { reactions: { reactionId: body.reactionId } } },
       { new: true }
     )
       .then((dbThoughtData) => res.json(dbThoughtData))
